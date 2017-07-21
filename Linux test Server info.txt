@@ -1,0 +1,60 @@
+[root / PASSWORD : 123123]
+mysql p/w : 123123
+
+
+1. 165.246.197.73 세팅 (완료)
+
+2. 한글로 바꾸기
+
+3. APM환경 세팅 (진행중)
+개발환경 apache 2.2 / php 5.2 / mysql 5.1       32bit
+cd /usr/local/apache2/bin
+./apachectl start
+
+-PHP 5.2
+http://wnstjqdl.tistory.com/entry/%EB%A6%AC%EB%88%85%EC%8A%A4-PHP-52-%EC%84%A4%EC%B9%98
+
+-apache 2.2
+https://pat.im/909
+
+
+
+
+
+
+
+
+./configure --prefix=/usr/local/mysql --with-charset=utf8 --with-extra-charsets=all --with-mysqld-user=mysql --with-innodb
+
+
+./configure --prefix=/usr/local/mysql --with-charset=utf8 --with-extra-charsets=all --with-mysqld-user=mysql --with-innodb --enable-thread-safe-client
+
+아 mysql 설치할때 cmake 로햇는데
+
+cmake \
+-DCMAKE_INSTALL_PREFIX=/usr/local/mysql \
+-DMYSQL_DATADIR=/usr/local/mysql/data \
+-DMYSQL_UNIX_ADDR=/usr/local/mysql/mysql.socket \
+-DSYSCONFDIR=/etc \
+-DMYSQL_TCP_PORT=3306 \
+-DMYSQL_USER=mysql \
+-DDEFAULT_CHARSET=utf8 \
+-DDEFAULT_COLLATION=utf8_general_ci \
+-DWITH_EXTRA_CHARSETS=all \
+-DENABLED_LOCAL_INFILE=1 \
+-DWITH_INNOBASE_STORAGE_ENGINE=1 \
+-DWITH_ARCHIVE_STORAGE_ENGINE=1 \
+-DWITH_BLACKHOLE_STORAGE_ENGINE=1
+
+./scripts/mysql_install_db --basedir=/usr/local/mysql --datadir=/usr/local/mysql/data --user=mysql
+
+cmake -DCMAKE_INSTALL_PREFIX=/usr/local/mysql -DDEFAULT_CHARSET=utf8 -DDEFAULT_COLLATION=utf8_korean_ci -DWITH_EXTRA_CHARSETS=all -DMYSQL_DATADIR=/usr/local/mysql/data -DENABLED_LOCAL_INFILE=1 -DWITH_INNOBASE_STORAGE_ENGINE=1 -DMYSQL_UNIX_ADDR=/usr/local/mysql/mysql.socket
+
+
+
+
+
+
+
+
+
