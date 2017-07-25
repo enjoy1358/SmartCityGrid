@@ -1,0 +1,47 @@
+./configure --prefix=/usr/local/php \
+--with-apxs2=/usr/local/apache2/bin/apxs --with-config-file-path=/usr/local/apache2/conf \
+--with-mysql=/usr/local/mysql --with-mysql-sock=/var/mysql \    
+--with-mysqli=/usr/local/mysql/bin/mysql_config \                        
+--with-pdo-mysql=shared,/usr/local/mysql \                                  
+--with-regex=php --with-libxml-dir=/usr \
+--with-openssl --with-pcre-regex \
+--with-zlib --with-bz2 --with-curl \
+--with-gdbm --with-db4=/usr --with-dbm \
+--with-pcre-dir=/usr --with-openssl-dir=/usr \
+--with-libxml-dir=/usr \
+--with-gd \
+--with-vpx-dir=/usr --with-jpeg-dir=/usr --with-png-dir=/usr \
+--with-zlib-dir=/usr --with-xpm-dir=/usr \
+--with-freetype-dir=/usr --with-t1lib=/usr \
+--with-gettext --with-gmp --with-mhash \
+--with-imap --with-imap-ssl \
+--with-kerberos \
+--with-icu-dir=/usr \
+--with-ldap --with-ldap-sasl \
+--with-libmbfl --with-onig \
+--with-mcrypt \
+--with-libedit --with-readline \
+--with-tidy \
+--with-libexpat-dir=/usr --with-xmlrpc --with-xsl \
+--with-pear --with-pic \
+--with-libdir=lib64 \
+--enable-bcmath --enable-calendar \
+--enable-exif --enable-ftp --enable-pcntl \
+--enable-gd-native-ttf --enable-gd-jis-conv \
+--enable-intl --enable-mbstring \
+--enable-shmop --enable-sockets \
+--enable-sysvmsg --enable-sysvsem --enable-sysvshm \
+--enable-wddx --enable-zip \
+--enable-mysqlnd \                                                                      
+--enable-dba=shared --enable-mod-charset \
+--enable-dom --enable-mbregex --enable-inline-optimization \
+--enable-sigchild --enable-soap \
+--enable-maintainer-zts \
+--enable-opcache=no
+
+
+노노
+다시해야됨
+이거 제대로 적용 안됨ㅇㅋ
+
+저것좀 넣어줘 서버에
