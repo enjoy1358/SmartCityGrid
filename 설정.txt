@@ -40,8 +40,4 @@
 --enable-opcache=no
 
 
-노노
-다시해야됨
-이거 제대로 적용 안됨ㅇㅋ
-
-저것좀 넣어줘 서버에
+git test test
